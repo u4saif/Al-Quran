@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+  currentTheme = 'light';
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  toggleTheme(value:string){
+    this.currentTheme=value
+    console.log("DSDSd",event)
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-top-nav',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopNavComponent implements OnInit {
 
+  @Output() toggleTheme : EventEmitter<string> = new EventEmitter();
+  darkthemeMode= false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  changeTheme(){
+    this.darkthemeMode = !this.darkthemeMode;
+    let currentTheme = (this.darkthemeMode) ? 'dark' : 'light';
+    this.toggleTheme.emit(currentTheme);
+  }
 }

@@ -1,5 +1,5 @@
-<div [attr.data-bs-theme]="'dark'">
-  <app-top-nav></app-top-nav>
+<div [attr.data-bs-theme]="currentTheme">
+  <app-top-nav (toggleTheme)="toggleTheme($event)"></app-top-nav>
   <div class="sidebar-nav">
     <app-side-nav></app-side-nav>
   </div>
