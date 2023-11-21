@@ -1,9 +1,0 @@
-.custom-control-input:not(:checked) ~ .custom-control-label::before {
-    background-color: blue; /* Change the background color of the toggle when it is not checked */
-    border-color: yellow; /* Change the border color of the checkbox when it is not checked */
-  }
-
-  .custom-control-input:checked ~ .custom-control-label::before {
-    background-color: red; /* Change the color of the toggle when it is checked */
-    border-color: green; /* Change the border color of the toggle when it is checked */
-}
