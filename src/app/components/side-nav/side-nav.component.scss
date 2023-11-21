@@ -1,8 +1,17 @@
 .sidebar-nav {
-    width: 50px;
+    width: 70px;
 }
 
 .logo{
-    padding-left: 2rem;
-    padding-top: 0rem;
+    padding-top: 0.70rem;
+    background-color: #20c997;
+}
+.card > ul {
+    height: 100vh;
+    list-style: none;
+    padding-left: 0.3rem;
+
+    & li{
+        padding: 1rem;
+    }
 }
