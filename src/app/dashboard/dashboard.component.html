@@ -1,6 +1,17 @@
 <div [attr.data-bs-theme]="currentTheme">
-  <app-top-nav (toggleTheme)="toggleTheme($event)"></app-top-nav>
-  <div class="sidebar-nav">
+  <div class="topnavMain">
+    <div class="top" style="z-index: 99999;">
+      <app-top-nav (toggleTheme)="toggleTheme($event)"></app-top-nav>
+    </div>
+    <div class="mainContainer container">
+      <div class="container" *ngFor="let card of cardData;index as i">
+        <app-surah-card [card]="card"></app-surah-card>
+      </div>
+    </div>
+  </div>
+  <div class="sidebar-nav" style="z-index: 999990;">
     <app-side-nav></app-side-nav>
   </div>
+
+  <div class="two"></div>
 </div>

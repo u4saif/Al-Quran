@@ -8,4 +8,39 @@
     list-style: none;
     border-right: 1px solid rgba(0, 0, 0, 0.175);
     overflow: hidden;
-    }
+}
+
+.topnavMain {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.top {
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.mainContainer {
+    height: 100%;
+    // padding-left: 70px;
+    //border: 2px solid red;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .footer-field {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    //color: white;
+    background-size: cover;
+    background-image: url(../../assets/SVG/16.svg);
+}

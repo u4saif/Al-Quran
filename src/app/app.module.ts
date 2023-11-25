@@ -7,13 +7,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TopNavComponent } from './components/top-nav/top-nav.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
+import { SurahCardComponent } from './components/surah-card/surah-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     TopNavComponent,
-    SideNavComponent
+    SideNavComponent,
+    SurahCardComponent
   ],
   imports: [
     BrowserModule,
