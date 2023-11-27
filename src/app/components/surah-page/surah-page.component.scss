@@ -10,10 +10,11 @@
 }
 
 li{
-    transition: 1s all;
+    transition: 0.3s all;
     cursor: pointer;
 }
 
 li:hover{
-    background-color: #20c997;
+    // background-color: #20c997;
+    border-right: 3px solid #20c997;
 }

@@ -6,12 +6,13 @@
         {{bismillah}}
         <!-- <img src="../../../assets/SVG/bismillah.svg" alt="bismillah" width="200pt"> -->
     </div>
-    <ul class="list-group list-group-flush p-0" dir="rtl">
+    <ul class="list-group list-group-flush p-0" >
       <li class="list-group-item" *ngFor="let aya of surah.data.ayahs">
-        <span class="d-flex align-items-center">
-          <strong class="m-2" style="max-width: 90%;">{{aya.text}}</strong> 
-          <div class="footer-field"><strong> {{aya.numberInSurah}}</strong></div>
+        <span class="d-flex align-items-center flex-row-reverse">
+          <strong  class="m-2" style="max-width: 90%;">{{aya.text}}</strong> 
+          <div   class="footer-field"><strong> {{aya.numberInSurah}}</strong></div>
         </span>
+        <!-- <p class="d-flex" [ngClass]="{'flex-row-reverse': surah.data.edition.direction== 'rtl' }"></p> -->
       </li>
     </ul>
   </div>
