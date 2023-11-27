@@ -1,0 +1,19 @@
+.footer-field {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    //color: white;
+    background-size: cover;
+    background-image: url(../../../assets/SVG/16.svg);
+}
+
+li{
+    transition: 1s all;
+    cursor: pointer;
+}
+
+li:hover{
+    background-color: #20c997;
+}

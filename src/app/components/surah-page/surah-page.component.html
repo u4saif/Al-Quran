@@ -1,0 +1,17 @@
+<div class="card rounded-0 m-0" *ngIf="surah">
+    <div class="card-header rounded-0 text-center" style="background-color: #20c9977a">
+        <h5 class="card-title">
+            ({{surah.data.englishName}}) {{surah.data.name}} 
+        </h5>
+        {{bismillah}}
+        <!-- <img src="../../../assets/SVG/bismillah.svg" alt="bismillah" width="200pt"> -->
+    </div>
+    <ul class="list-group list-group-flush p-0" dir="rtl">
+      <li class="list-group-item" *ngFor="let aya of surah.data.ayahs">
+        <span class="d-flex align-items-center">
+          <strong class="m-2" style="max-width: 90%;">{{aya.text}}</strong> 
+          <div class="footer-field"><strong> {{aya.numberInSurah}}</strong></div>
+        </span>
+      </li>
+    </ul>
+  </div>
