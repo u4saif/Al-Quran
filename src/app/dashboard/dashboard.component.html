@@ -4,14 +4,33 @@
       <app-top-nav (toggleTheme)="toggleTheme($event)"></app-top-nav>
     </div>
     <div class="mainContainer">
-      <div style="width: 30%; float:left;padding-left: 4.5rem;">
+      <div style="width: 30%; float:left;padding-left: 4.5rem; height: 90vh; overflow-y: scroll;">
         <ng-container *ngFor="let card of cardData;index as i">
           <app-surah-card [card]="card"></app-surah-card>
         </ng-container>
       </div>
 
-      <div style="width: 70%; float:right;background-color: pink;">
-         <div style="width: 90%; float:left;background-color: rgb(231, 11, 47);">dadadasdas</div>
+      <div style="width: 70%; float:right;">
+         
+        <div style="width: 90%; float:left; max-height: 90vh; overflow-y: auto;">
+          <div class="card rounded-0 m-0" >
+            <div class="card-header rounded-0 text-center" style="background-color: #20c9977a">
+              Featured
+              <h5 class="card-title">
+                ({{surah.data.englishName}}) {{surah.data.name}} 
+              </h5>
+            </div>
+            <ul class="list-group list-group-flush p-0" dir="rtl">
+              <li class="list-group-item" *ngFor="let aya of surah.data.ayahs">
+                <span class="d-flex align-items-center">
+                  <strong class="m-2" style="max-width: 90%;">{{aya.text}}</strong> 
+                  <div class="footer-field"><strong> {{aya.number}}</strong></div>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
          <div style="width: 10%; float:right;background-color: rgb(109, 239, 44);"> <p>Work in process</p></div>
      </div>
   </div>
