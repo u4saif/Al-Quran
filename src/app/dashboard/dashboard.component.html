@@ -3,15 +3,20 @@
     <div class="top" style="z-index: 99999;">
       <app-top-nav (toggleTheme)="toggleTheme($event)"></app-top-nav>
     </div>
-    <div class="mainContainer container">
-      <div class="container" *ngFor="let card of cardData;index as i">
-        <app-surah-card [card]="card"></app-surah-card>
+    <div class="mainContainer">
+      <div style="width: 30%; float:left;padding-left: 4.5rem;">
+        <ng-container *ngFor="let card of cardData;index as i">
+          <app-surah-card [card]="card"></app-surah-card>
+        </ng-container>
       </div>
-    </div>
+
+      <div style="width: 70%; float:right;background-color: pink;">
+         <div style="width: 90%; float:left;background-color: rgb(231, 11, 47);">dadadasdas</div>
+         <div style="width: 10%; float:right;background-color: rgb(109, 239, 44);"> <p>Work in process</p></div>
+     </div>
   </div>
   <div class="sidebar-nav" style="z-index: 999990;">
     <app-side-nav></app-side-nav>
   </div>
 
-  <div class="two"></div>
 </div>
