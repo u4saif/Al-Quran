@@ -10,6 +10,7 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { SurahCardComponent } from './components/surah-card/surah-card.component';
 import { SurahPageComponent } from './components/surah-page/surah-page.component';
 import { SettingCardComponent } from './components/setting-card/setting-card.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { SettingCardComponent } from './components/setting-card/setting-card.com
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     NgbModule
   ],

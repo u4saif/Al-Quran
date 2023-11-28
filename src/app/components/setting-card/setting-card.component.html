@@ -1,12 +1,63 @@
-<form class="card rounded-0 p-1 vh-100">
-    <fieldset>
-        <legend class="p-2">Settings</legend>
-        <div class="rounded-0 mb-3">
-            <label for="QuranText" class="form-label">Quran Text</label>
-            <select id="QuranText" class="form-select rounded-0">
-                <option>Simple</option>
-            </select>
-        </div>
-        <button type="submit" class="btn rounded-0 p-2 w-100" style="background-color: #20c9977a;">Save</button>
-    </fieldset>
+<form #settinForm="ngForm" class="card rounded-0 p-1 vh-100">
+  <fieldset>
+    <legend class="p-2">Settings</legend>
+    <div class="rounded-0 mb-3">
+      <label for="QuranText" class="form-label">Quran Text</label>
+      <select
+        id="QuranText"
+        class="form-select rounded-0"
+        name="QuranText"
+        [(ngModel)]="QuranText"
+      >
+        <option>Simple</option>
+        <option>Simple2</option>
+        <option>Simple3</option>
+      </select>
+    </div>
+
+    <div class="rounded-0 mb-3">
+      <label for="language" class="form-label">Language</label>
+      <select
+        id="language"
+        class="form-select rounded-0"
+        name="language"
+        ngModel
+      >
+        <option>language</option>
+        <option>language2</option>
+        <option>language3</option>
+      </select>
+
+      <label for="translationText" class="form-label">Translation Text</label>
+      <select
+        id="translationText"
+        class="form-select rounded-0"
+        name="translationText"
+        ngModel
+      >
+        <option>translationText</option>
+        <option>translationText2</option>
+        <option>translationText3</option>
+      </select>
+
+
+      <label for="translationAudio" class="form-label">Translation Audio</label>
+      <select
+        id="translationAudio"
+        class="form-select rounded-0"
+        name="translationAudio"
+        ngModel
+      >
+        <option>translationAudio</option>
+        <option>translationAudio2</option>
+        <option>translationAudio3</option>
+      </select>
+    </div>
+    <a
+      (click)="updateSetting(settinForm)"
+      class="btn rounded-0 p-2 w-100"
+      style="background-color: #20c9977a"
+      >Save</a
+    >
+  </fieldset>
 </form>
