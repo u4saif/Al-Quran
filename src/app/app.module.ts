@@ -9,6 +9,7 @@ import { TopNavComponent } from './components/top-nav/top-nav.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { SurahCardComponent } from './components/surah-card/surah-card.component';
 import { SurahPageComponent } from './components/surah-page/surah-page.component';
+import { SettingCardComponent } from './components/setting-card/setting-card.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SurahPageComponent } from './components/surah-page/surah-page.component
     TopNavComponent,
     SideNavComponent,
     SurahCardComponent,
-    SurahPageComponent
+    SurahPageComponent,
+    SettingCardComponent
   ],
   imports: [
     BrowserModule,
