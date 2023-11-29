@@ -3,10 +3,10 @@
     <div class="top" style="z-index: 99999;">
       <app-top-nav (toggleTheme)="toggleTheme($event)"></app-top-nav>
     </div>
-    <div class="mainContainer">
+    <div class="mainContainer" *ngIf="(cardData$ | async) as cardData">
       <div style="width: 30%; float:left;padding-left: 4.5rem; height: 90vh; overflow-y: scroll;">
-        <ng-container *ngFor="let card of cardData;index as i">
-          <app-surah-card [card]="card"></app-surah-card>
+        <ng-container *ngFor="let card of cardData.data;index as i">
+          <app-surah-card [card]="card" (surahChangeEvent)="surahChanged($event)"></app-surah-card>
         </ng-container>
       </div>
 

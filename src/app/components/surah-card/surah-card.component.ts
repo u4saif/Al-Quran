@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-surah-card',
@@ -15,9 +15,15 @@ export class SurahCardComponent implements OnInit {
     revelationType: '',
   };
 
+  @Output() surahChangeEvent:EventEmitter<number> = new EventEmitter();
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  surahChange(surahId:number){
+    this.surahChangeEvent.emit(surahId)
+  }
 }
 
 interface Card {

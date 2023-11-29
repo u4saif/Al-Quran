@@ -31,3 +31,23 @@ li:hover{
     // background-color: #20c997;
     border-right: 3px solid #20c997;
 }
+
+.madenianHeading-icon {
+    width: 35pt;
+    height: 52px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-image: url(../../../assets/SVG/2.svg);
+}
+
+.MeccanHeading-icon {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-image: url(../../../assets/SVG/20.svg);
+}
