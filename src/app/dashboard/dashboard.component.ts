@@ -58,30 +58,15 @@ export class DashboardComponent implements OnInit {
 
   surahData: any = null;
 
-  ngOnInit(): void {
-    this.dashboardServive
-      .get('https://api.alquran.cloud/v1/edition/format/text')
-      .subscribe((response) => {
-        console.warn(response);
-      });
-
-      this.dashboardServive
-      .get('https://api.alquran.cloud/v1/surah/2/editions/uran-wordbyword,bn.hoque')
-      .subscribe((response) => {
-        this.surahData = response;
-      });
-  }
+  ngOnInit(): void {}
   toggleTheme(value: string) {
     this.currentTheme = value;
-    console.log('DSDSd', event);
   }
 
   settingUpdate(eventData:any){
-    console.log('fdfdf', eventData);
-    const updatedEdition = eventData.QuranText;
     this.surahData = null;
     this.dashboardServive
-      .get(`https://api.alquran.cloud/v1/surah/1/editions/${updatedEdition},bn.hoque`)
+      .get(`https://api.alquran.cloud/v1/surah/1/editions/${eventData.QuranText},${eventData.translationText}`)
       .subscribe((response) => {
         this.surahData = response;
       });

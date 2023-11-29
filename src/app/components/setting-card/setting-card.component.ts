@@ -9,7 +9,14 @@ export class SettingCardComponent implements OnInit {
   @Output() settinFormData: EventEmitter<object> = new EventEmitter();
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.settinFormData.emit({
+      QuranText: 'quran-simple-clean',
+      language: 'en',
+      translationText: 'hi.hindi',
+      translationAudio: 'ur.khan',
+    });
+  }
   QuranText = 'quran-simple-clean';
   QuranTextOptions = Constants.QURAN_TEXT;
   language = 'en';
