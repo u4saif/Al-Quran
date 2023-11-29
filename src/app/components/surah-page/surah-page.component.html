@@ -1,4 +1,4 @@
-<div class="card rounded-0 m-0" *ngIf="surah.data">
+<div class="card rounded-0 m-0" *ngIf="surah?.data">
     <div class="card-header rounded-0 text-center" style="background-color: #20c9977a">
         <h5 class="card-title">
             ({{surah.data[0].englishName}}) {{surah.data[0].name}} 
@@ -9,7 +9,7 @@
     <ul class="list-group list-group-flush p-0" >
       <li class="list-group-item" *ngFor="let aya of surah.data[0].ayahs;index as i">
         <span class="d-flex align-items-center flex-row-reverse">
-          <strong  class="m-2" style="max-width: 90%;">{{aya.text}}</strong> 
+          <span  class="m-2" style="max-width: 90%;"><p>{{aya.text}}</p></span> 
           <div   class="footer-field"><strong> {{aya.numberInSurah}}</strong></div>
         </span>
         <span *ngIf="surah.data[1]" class="d-flex fst-italic" [ngClass]="{'flex-row-reverse': surah.data[1].edition.direction== 'rtl' }">
@@ -20,7 +20,7 @@
     </ul>
 </div>
 
-<div *ngIf="!surah.data" class="card rounded-0 border-0" aria-hidden="true">
+<div *ngIf="!surah?.data" class="card rounded-0 border-0" aria-hidden="true">
   <div class="card-body rounded-0">
     <a href="#" tabindex="-1" class="btn m-2 btn-success disabled placeholder w-100 "></a>
     <h5 class="card-title placeholder-glow">

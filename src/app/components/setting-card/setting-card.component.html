@@ -9,9 +9,9 @@
         name="QuranText"
         [(ngModel)]="QuranText"
       >
-        <option>Simple</option>
-        <option>Simple2</option>
-        <option>Simple3</option>
+        <ng-container *ngFor="let lng of QuranTextOptions">
+          <option value="{{ lng.identifier }}">{{ lng.englishName }}</option>
+        </ng-container>
       </select>
     </div>
 
@@ -21,11 +21,14 @@
         id="language"
         class="form-select rounded-0"
         name="language"
-        ngModel
+        [(ngModel)]="language"
+        (change)="filterTranslation(settinForm.value)"
       >
-        <option>language</option>
-        <option>language2</option>
-        <option>language3</option>
+        <ng-container *ngFor="let lng of LanguageOptions">
+          <option value="{{ lng.code }}">
+            {{ lng.name }} | ({{ lng.nativeName }})
+          </option>
+        </ng-container>
       </select>
 
       <label for="translationText" class="form-label">Translation Text</label>
@@ -33,24 +36,23 @@
         id="translationText"
         class="form-select rounded-0"
         name="translationText"
-        ngModel
+        [(ngModel)]="TranslationText"
       >
-        <option>translationText</option>
-        <option>translationText2</option>
-        <option>translationText3</option>
+        <ng-container *ngFor="let text of TranslationTextOption">
+          <option value="{{ text.identifier }}">{{text.languageName}} : ({{ text.name }})</option>
+        </ng-container>
       </select>
-
 
       <label for="translationAudio" class="form-label">Translation Audio</label>
       <select
         id="translationAudio"
         class="form-select rounded-0"
         name="translationAudio"
-        ngModel
+        [(ngModel)]="translationAudio"
       >
-        <option>translationAudio</option>
-        <option>translationAudio2</option>
-        <option>translationAudio3</option>
+      <ng-container *ngFor="let text of TranslationAudioOption">
+        <option value="{{ text.identifier }}">{{text.languageName}} : ({{ text.name }})</option>
+      </ng-container>
       </select>
     </div>
     <a

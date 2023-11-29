@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DashboardService } from '../services/dashboard.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
   currentTheme = 'light';
-  constructor() {}
+  constructor(private dashboardServive:DashboardService) {}
   cardData = [
     {
       number: 1,
@@ -55,16 +56,35 @@ export class DashboardComponent implements OnInit {
   //https://api.alquran.cloud/v1/edition/type/translation
   // https://api.alquran.cloud/v1/surah/1/editions/uran-wordbyword,hi.farooq
 
-  surahData: any = {};
+  surahData: any = null;
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.dashboardServive
+      .get('https://api.alquran.cloud/v1/edition/format/text')
+      .subscribe((response) => {
+        console.warn(response);
+      });
+
+      this.dashboardServive
+      .get('https://api.alquran.cloud/v1/surah/2/editions/uran-wordbyword,bn.hoque')
+      .subscribe((response) => {
+        this.surahData = response;
+      });
+  }
   toggleTheme(value: string) {
     this.currentTheme = value;
     console.log('DSDSd', event);
   }
 
-  settingUpdate(eventData:object){
+  settingUpdate(eventData:any){
     console.log('fdfdf', eventData);
+    const updatedEdition = eventData.QuranText;
+    this.surahData = null;
+    this.dashboardServive
+      .get(`https://api.alquran.cloud/v1/surah/1/editions/${updatedEdition},bn.hoque`)
+      .subscribe((response) => {
+        this.surahData = response;
+      });
   }
   //https://api.alquran.cloud/v1/edition/format/text
   data = {

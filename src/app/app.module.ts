@@ -11,7 +11,7 @@ import { SurahCardComponent } from './components/surah-card/surah-card.component
 import { SurahPageComponent } from './components/surah-page/surah-page.component';
 import { SettingCardComponent } from './components/setting-card/setting-card.component';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from  '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +25,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule,
     NgbModule
   ],
