@@ -1,7 +1,8 @@
 <div class="card rounded-0 m-0" *ngIf="surah?.data">
     <div class="card-header rounded-0 text-center" style="background-color: #20c9977a">
         <h5 class="card-title d-flex justify-content-center align-items-center">
-          <div [ngClass]="surah.data[0].revelationType=='Medinan' ? 'madenianHeading-icon' : 'MeccanHeading-icon'"><strong> {{surah.data[0].number}} </strong></div> ({{surah.data[0].englishName}}) {{surah.data[0].name}} 
+          <div [ngClass]="surah.data[0].revelationType=='Medinan' ? 'madenianHeading-icon' : 'MeccanHeading-icon'"></div> ({{surah.data[0].englishName}}) {{surah.data[0].name}} 
+          <div   class="footer-field">  {{surah.data[0].number}}  </div>
         </h5>
         {{bismillah}}
         <!-- <img src="../../../assets/SVG/bismillah.svg" alt="bismillah" width="200pt"> -->
