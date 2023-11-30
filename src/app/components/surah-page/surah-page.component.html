@@ -1,3 +1,4 @@
+
 <div class="card rounded-0 m-0" *ngIf="surah?.data">
     <div class="card-header rounded-0 text-center" style="background-color: #20c9977a">
         <h5 class="card-title d-flex justify-content-center align-items-center">
@@ -7,16 +8,30 @@
         {{bismillah}}
         <!-- <img src="../../../assets/SVG/bismillah.svg" alt="bismillah" width="200pt"> -->
     </div>
+    <div *ngIf="showAudioPlayer" class="card player rounded-0">
+      <div class="w-75 h-100">
+        <audio controls class="w-100 rounded-0" src="{{audioURL}}" autoplay></audio>
+      </div>
+      <div class="w-25 d-flex playerInfo">
+        Juz: {{currentAyatPlaying.juz}}<br>
+       Ayat: {{currentAyatPlaying.number}} Surah:{{surah.data[0].number}}
+      </div>
+    </div>
     <ul class="list-group list-group-flush p-0" >
       <li class="list-group-item" *ngFor="let aya of surah.data[0].ayahs;index as i">
         <span class="d-flex align-items-center flex-row-reverse">
-          <h5  class="m-2" style="max-width: 90%;"><p>{{aya.text}}</p></h5> 
+          <h1  class="m-2" style="max-width: 90%;"><p>{{aya.text}}</p></h1> 
           <div   class="footer-field"><strong> {{aya.numberInSurah}}</strong></div>
         </span>
         <span *ngIf="surah.data[1]" class="d-flex fst-italic" [ngClass]="{'flex-row-reverse': surah.data[1].edition.direction== 'rtl' }">
           <div   class="footer-fieldSM"><strong> {{aya.numberInSurah}}</strong></div>
           {{surah.data[1].ayahs[i].text}}
       </span>
+
+      <span *ngIf="surah.data[2]" class="d-flex fst-italic p-1" [ngClass]="{'flex-row-reverse': surah.data[1].edition.direction != 'rtl' }">
+        Listen: <div  (click)="playAyat(surah.data[2].ayahs[i],i+1)" class="playIcon"><strong></strong></div>
+      </span>
+
       </li>
     </ul>
 </div>

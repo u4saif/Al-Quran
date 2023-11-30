@@ -51,3 +51,40 @@ li:hover{
     background-size: cover;
     background-image: url(../../../assets/SVG/20.svg);
 }
+
+.playIcon{
+    width: 25px;
+    height: 25px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-image: url(../../../assets/SVG/playbtn.svg);
+}
+
+.playIcon:hover{
+    transform: scale(1.1);
+}
+
+.playerInfo{
+    width: 100%;
+    background-color: #20c997;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+.player{
+    background-color: #20c9977a;
+    z-index: 16;
+    position: sticky;
+    top: 0vh;
+    display: flex;
+    flex-direction: row;
+}
+  audio::-webkit-media-controls-panel {
+    background-color: #20c9977a;
+    opacity: 0.85;
+    color: #fff;
+  }

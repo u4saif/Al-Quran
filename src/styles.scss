@@ -2,3 +2,8 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Amiri+Quran&family=Unbounded&display=swap');
+
+h1 {
+  font: 900 32px/32px Roboto, 'MuseoModerno', sans-serif !important
+}

@@ -11,6 +11,7 @@ export class DashboardComponent implements OnInit {
   currentTheme = 'light';
   QuranText:string = '';
   translationText:string ='';
+  translationAudio:string ='';
   currentSurah = 1;
   cardData$: Observable<any>;
   constructor(private dashboardServive:DashboardService) {
@@ -31,9 +32,10 @@ export class DashboardComponent implements OnInit {
   settingUpdate(eventData:any){
     this.QuranText = eventData.QuranText;
     this.translationText = eventData.translationText;
+    this.translationAudio = eventData.translationAudio;
     this.surahData = null;
     this.dashboardServive
-      .get(`https://api.alquran.cloud/v1/surah/${this.currentSurah}/editions/${this.QuranText},${this.translationText}`)
+      .get(`https://api.alquran.cloud/v1/surah/${this.currentSurah}/editions/${this.QuranText},${this.translationText},${this.translationAudio}`)
       .subscribe((response) => {
         this.surahData = response;
       });
@@ -43,7 +45,7 @@ export class DashboardComponent implements OnInit {
     this.currentSurah = eventData;
     this.surahData = null;
     this.dashboardServive
-    .get(`https://api.alquran.cloud/v1/surah/${this.currentSurah}/editions/${this.QuranText},${this.translationText}`)
+    .get(`https://api.alquran.cloud/v1/surah/${this.currentSurah}/editions/${this.QuranText},${this.translationText},${this.translationAudio}`)
     .subscribe((response) => {
       this.surahData = response;
     }); 

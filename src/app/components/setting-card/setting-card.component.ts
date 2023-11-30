@@ -11,13 +11,13 @@ export class SettingCardComponent implements OnInit {
 
   ngOnInit(): void {
     this.settinFormData.emit({
-      QuranText: 'quran-simple-clean',
+      QuranText: 'quran-uthmani',
       language: 'en',
       translationText: 'hi.hindi',
       translationAudio: 'ur.khan',
     });
   }
-  QuranText = 'quran-simple-clean';
+  QuranText = 'quran-uthmani';
   QuranTextOptions = Constants.QURAN_TEXT;
   language = 'en';
   LanguageOptions = Constants.LANGUAGES;
