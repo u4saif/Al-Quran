@@ -1,3 +1,16 @@
+.surahCard{
+    width: 30%;
+    float:left;
+    padding-left: 4.5rem;
+}
+.surahPage{
+    width: 70%;
+    float:right;
+}
+
+.onlyPage{
+    width: 80%;
+}
 .sidebar-nav {
     position: absolute;
     top: 0;
@@ -40,4 +53,22 @@
     //color: white;
     background-size: cover;
     background-image: url(../../assets/SVG/16.svg);
+}
+
+@media screen and (max-width:750px){
+    h1 {
+        font: 700 28px/28px Roboto, 'MuseoModerno', sans-serif !important
+      }
+
+    .sidebar-nav, .surahCard, .settingCard{
+        border: 2px solid red;
+        padding-left: 4.5rem;
+        width: 0%;
+        display: none;
+    }
+
+    .surahPage, .onlyPage{
+        width: 100% ;
+    }
+
 }

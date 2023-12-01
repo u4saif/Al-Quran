@@ -4,19 +4,19 @@
       <app-top-nav (toggleTheme)="toggleTheme($event)"></app-top-nav>
     </div>
     <div class="mainContainer" *ngIf="(cardData$ | async) as cardData">
-      <div style="width: 30%; float:left;padding-left: 4.5rem; height: 90vh; overflow-y: scroll;">
+      <div class="surahCard" style=" height: 90vh; overflow-y: scroll;">
         <ng-container *ngFor="let card of cardData.data;index as i">
           <app-surah-card [card]="card" [currentSurah]="currentSurah" (surahChangeEvent)="surahChanged($event)"></app-surah-card>
         </ng-container>
       </div>
 
-      <div style="width: 70%; float:right;">
+      <div class="surahPage">
          
-        <div style="width: 80%; float:left; max-height: 90vh; overflow-y: auto;">
+        <div class="onlyPage" style="float:left; max-height: 90vh; overflow-y: auto;">
           <app-surah-page [surah]="surahData"></app-surah-page>
         </div>
 
-        <div style="width: 20%; float:right;">
+        <div class="settingCard" style="width: 20%; float:right;">
         <app-setting-card (settinFormData)="settingUpdate($event)"></app-setting-card>
         </div>
   </div>
