@@ -15,6 +15,7 @@ export class SurahCardComponent implements OnInit {
     revelationType: '',
   };
 
+  @Input() currentSurah: number = 1;
   @Output() surahChangeEvent:EventEmitter<number> = new EventEmitter();
 
   constructor() {}

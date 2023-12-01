@@ -6,7 +6,7 @@
     <div class="mainContainer" *ngIf="(cardData$ | async) as cardData">
       <div style="width: 30%; float:left;padding-left: 4.5rem; height: 90vh; overflow-y: scroll;">
         <ng-container *ngFor="let card of cardData.data;index as i">
-          <app-surah-card [card]="card" (surahChangeEvent)="surahChanged($event)"></app-surah-card>
+          <app-surah-card [card]="card" [currentSurah]="currentSurah" (surahChangeEvent)="surahChanged($event)"></app-surah-card>
         </ng-container>
       </div>
 
