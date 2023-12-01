@@ -17,6 +17,8 @@ export class SurahPageComponent implements OnInit, OnChanges {
     numberInSurah: 1,
     juz: 1,
   };
+
+  translationVisiable:boolean = true;
   constructor() {}
 
   ngOnInit(): void {}
@@ -35,5 +37,9 @@ export class SurahPageComponent implements OnInit, OnChanges {
     };
     this.showAudioPlayer = true;
     this.audioURL = item.audio;
+  }
+
+  toggleTranslation(){
+    this.translationVisiable = !this.translationVisiable;
   }
 }
