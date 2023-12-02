@@ -6,22 +6,23 @@
     <div class="mainContainer" *ngIf="(cardData$ | async) as cardData">
       <div class="surahCard" style=" height: 90vh; overflow-y: scroll;">
         <ng-container *ngFor="let card of cardData.data;index as i">
-          <app-surah-card [card]="card" [currentSurah]="currentSurah" (surahChangeEvent)="surahChanged($event)"></app-surah-card>
+          <app-surah-card [card]="card" [currentSurah]="currentSurah"
+            (surahChangeEvent)="surahChanged($event)"></app-surah-card>
         </ng-container>
       </div>
 
       <div class="surahPage">
-         
+
         <div class="onlyPage" style="float:left; max-height: 90vh; overflow-y: auto;">
           <app-surah-page [surah]="surahData"></app-surah-page>
         </div>
 
         <div class="settingCard" style="width: 20%; float:right;">
-        <app-setting-card (settinFormData)="settingUpdate($event)"></app-setting-card>
+          <app-setting-card (settinFormData)="settingUpdate($event)"></app-setting-card>
         </div>
-  </div>
-  <div class="sidebar-nav" style="z-index: 999990;">
-    <app-side-nav></app-side-nav>
-  </div>
+      </div>
+      <div class="sidebar-nav" style="z-index: 999990;">
+        <app-side-nav></app-side-nav>
+      </div>
 
-</div>
+    </div>
