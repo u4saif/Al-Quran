@@ -16,6 +16,16 @@
             </div>
           </div>
         </div>
+        <div ngbDropdown class="btn-group">
+          <a>
+            <img ngbDropdownToggle src="../../assets/SVG/setting.svg" alt="setting" width="20px" height="20px">
+          </a>
+          <div ngbDropdownMenu >
+            <div class="overflow-y-scroll" style="width: 200px; height: 90vh;">
+              <app-setting-card (settinFormData)="settingUpdate($event)"></app-setting-card>
+            </div>
+          </div>
+        </div>
       </app-top-nav>
       
     </div>
