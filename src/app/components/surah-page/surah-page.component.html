@@ -23,7 +23,7 @@
     <ul class="list-group list-group-flush p-0" >
       <li class="list-group-item" *ngFor="let aya of surah.data[0].ayahs;index as i">
         <span class="d-flex align-items-center flex-row-reverse">
-          <h1  class="m-2" style="max-width: 90%;"><p>{{aya.text}}</p></h1> 
+          <h1  class="m-2" style="max-width: 90%;"><p class="text-end">{{aya.text}}</p></h1> 
           <div   class="footer-field"><strong> {{aya.numberInSurah}}</strong></div>
         </span>
     <ng-container *ngIf="translationVisiable">

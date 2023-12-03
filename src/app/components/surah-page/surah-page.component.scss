@@ -28,8 +28,9 @@ li{
 }
 
 li:hover{
-    // background-color: #20c997;
-    border-right: 3px solid #20c997;
+    background: #20c9971a;
+    //outline: 2px solid #20c997;
+    box-shadow: -5px 0px 0px 0px #20c997, 5px 0px 0px 0px #20c997;
 }
 
 .madenianHeading-icon {
