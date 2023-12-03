@@ -3,11 +3,13 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand">
-        <button class="navbar-toggler" type="button" >
+        <!-- <button class="navbar-toggler" type="button" >
           <span class="navbar-toggler-icon"></span>
-        </button>
+        </button> -->
+        <span>
+          <ng-content></ng-content>
+        </span>
       </a>
-
       <div class="d-flex">
         <span class="form-check form-switch">
           <input
