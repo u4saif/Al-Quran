@@ -1,13 +1,13 @@
 <div [attr.data-bs-theme]="currentTheme">
   <div class="topnavMain">
-    <div class="top" style="z-index: 99999;">
+    <div class="top" style="z-index: 99999;"  *ngIf="(cardData$ | async) as cardData" >
       <app-top-nav (toggleTheme)="toggleTheme($event)">
         <div ngbDropdown class="btn-group surahDropdown" #myDrop="ngbDropdown">
           <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>
             Change Surah
           </button>
           <div ngbDropdownMenu class="dropdown-menu" style="left:-10px;width: 90vw;">
-            <div *ngIf="(cardData$ | async) as cardData" (click)="$event.stopPropagation(); myDrop.close()"
+            <div (click)="$event.stopPropagation(); myDrop.close()"
             class="overflow-y-scroll" style="height: 90vh;">
               <ng-container *ngFor="let card of cardData.data;index as i">
                 <app-surah-card [card]="card" [currentSurah]="currentSurah"
@@ -21,7 +21,7 @@
             <img ngbDropdownToggle src="../../assets/SVG/setting.svg" alt="setting" width="20px" height="20px">
           </a>
           <div ngbDropdownMenu >
-            <div class="overflow-y-scroll" style="width: 200px; height: 90vh;">
+            <div class="overflow-y-scroll" style="width: 100vw; height: 50vh;">
               <app-setting-card (settinFormData)="settingUpdate($event)"></app-setting-card>
             </div>
           </div>
