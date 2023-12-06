@@ -13,6 +13,7 @@ import { SettingCardComponent } from './components/setting-card/setting-card.com
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from  '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { AudioPlayerDirective } from './customDirectives/audio-player.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     SideNavComponent,
     SurahCardComponent,
     SurahPageComponent,
-    SettingCardComponent
+    SettingCardComponent,
+    AudioPlayerDirective
   ],
   imports: [
     BrowserModule,

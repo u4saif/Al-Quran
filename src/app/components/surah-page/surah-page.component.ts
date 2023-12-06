@@ -27,8 +27,7 @@ export class SurahPageComponent implements OnInit, OnChanges {
     this.audioURL = '';
     this.showAudioPlayer = false;
   }
-  playAyat(item: any,ayatNumber:number) {
-    console.warn(item);
+  playAyat(item: any,ayatNumber:number) { 
     this.currentAyatPlaying = {
       number: ayatNumber,
       audio: item.juz,
@@ -39,6 +38,9 @@ export class SurahPageComponent implements OnInit, OnChanges {
     this.audioURL = item.audio;
   }
 
+  nextAyatPlayed(event:any){ 
+    this.playAyat(event,event.numberInSurah);
+  }
   toggleTranslation(){
     this.translationVisiable = !this.translationVisiable;
   }
