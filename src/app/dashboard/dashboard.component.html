@@ -8,7 +8,7 @@
           </button>
           <div ngbDropdownMenu class="dropdown-menu" style="left:-10px;width: 90vw;">
             <div (click)="$event.stopPropagation(); myDrop.close()"
-            class="overflow-y-scroll" style="height: 90vh;">
+             style="height: 90vh;">
               <ng-container *ngFor="let card of cardData.data;index as i">
                 <app-surah-card [card]="card" [currentSurah]="currentSurah"
                   (surahChangeEvent)="surahChanged($event)"></app-surah-card>

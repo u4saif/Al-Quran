@@ -93,5 +93,7 @@
 
 .dropdown-menu {
     position: fixed !important;
-    transform: none !important;
+    transform: translate3d(0px, 50px, 0px) !important;
+    padding: 0px;
+    
 }
