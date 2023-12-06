@@ -7,7 +7,7 @@
             Change Surah
           </button>
           <div ngbDropdownMenu class="dropdown-menu" style="left:-10px;width: 90vw;">
-            <div (click)="$event.stopPropagation(); myDrop.close()"
+            <div class="overflow-y-scroll" (click)="$event.stopPropagation(); myDrop.close()"
              style="height: 90vh;">
               <ng-container *ngFor="let card of cardData.data;index as i">
                 <app-surah-card [card]="card" [currentSurah]="currentSurah"
