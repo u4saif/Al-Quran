@@ -46,7 +46,7 @@
       class="list-group-item"
       *ngFor="let aya of surah.data[0].ayahs; index as i"
     >
-      <span class="d-flex align-items-center flex-row-reverse">
+      <span [ngClass]="{'active': currentAyatPlaying.number== (i+1)}" class="d-flex align-items-center flex-row-reverse">
         <h1 class="m-2" style="max-width: 90%">
           <p class="text-end">{{ aya.text }}</p>
         </h1>
@@ -59,7 +59,8 @@
           *ngIf="surah.data[1]"
           class="d-flex fst-italic"
           [ngClass]="{
-            'flex-row-reverse': surah.data[1].edition.direction == 'rtl'
+            'flex-row-reverse': surah.data[1].edition.direction == 'rtl',
+            'active': currentAyatPlaying.number == i+1
           }"
         >
           <div class="footer-fieldSM">

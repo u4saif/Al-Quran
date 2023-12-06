@@ -90,4 +90,10 @@ li:hover{
     background-color: #20c9977a;
     opacity: 0.85;
     color: #fff;
-  }
+}
+
+.active{
+    background: #20c9971a;
+    //outline: 2px solid #20c997;
+    box-shadow: 0px 0px 0px 0px #20c997, 1px 0px 0px 0px #20c997;
+}
