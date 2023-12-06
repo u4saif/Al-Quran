@@ -1381,6 +1381,96 @@ export class Constants {
 
   public static readonly TRANSLATION_AUDIO = [
     {
+        "identifier": "ar.saoodshuraym",
+        "language": "ar",
+        "name": "سعود الشريم",
+        "englishName": "Saood bin Ibraaheem Ash-Shuraym",
+        "format": "audio",
+        "type": "versebyverse",
+        "direction": null,
+        "languageName": "Arabic"
+    },
+    {
+        "identifier": "zh.chinese",
+        "language": "zh",
+        "name": "中文",
+        "englishName": "Chinese",
+        "format": "audio",
+        "type": "versebyverse",
+        "direction": null,
+        "languageName": "Chinese"
+    },
+    {
+        "identifier": "en.walk",
+        "language": "en",
+        "name": "Ibrahim Walk",
+        "englishName": "Ibrahim Walk",
+        "format": "audio",
+        "type": "versebyverse",
+        "direction": null,
+        "languageName": "English"
+    },
+    {
+        "identifier": "fa.hedayatfarfooladvand",
+        "language": "fa",
+        "name": "Fooladvand - Hedayatfar",
+        "englishName": "Fooladvand - Hedayatfar",
+        "format": "audio",
+        "type": "translation",
+        "direction": null,
+        "languageName": "Persian"
+    },
+    {
+        "identifier": "ar.parhizgar",
+        "language": "ar",
+        "name": "شهریار پرهیزگار",
+        "englishName": "Parhizgar",
+        "format": "audio",
+        "type": "versebyverse",
+        "direction": null,
+        "languageName": "Arabic"
+    },
+    {
+        "identifier": "ur.khan",
+        "language": "ur",
+        "name": "Shamshad Ali Khan",
+        "englishName": "Shamshad Ali Khan",
+        "format": "audio",
+        "type": "versebyverse",
+        "direction": null,
+        "languageName": "Urdu"
+    },
+    {
+        "identifier": "fr.leclerc",
+        "language": "fr",
+        "name": "Youssouf Leclerc",
+        "englishName": "Youssouf Leclerc",
+        "format": "audio",
+        "type": "versebyverse",
+        "direction": null,
+        "languageName": "French"
+    },
+    {
+        "identifier": "ar.aymanswoaid",
+        "language": "ar",
+        "name": "أيمن سويد",
+        "englishName": "Ayman Sowaid",
+        "format": "audio",
+        "type": "versebyverse",
+        "direction": null,
+        "languageName": "Arabic"
+    },
+    {
+        "identifier": "ru.kuliev-audio",
+        "language": "ru",
+        "name": "Elmir Kuliev by 1MuslimApp",
+        "englishName": "Elmir Kuliev by 1MuslimApp",
+        "format": "audio",
+        "type": "versebyverse",
+        "direction": null,
+        "languageName": "Russian"
+    },
+    {
         "identifier": "ar.abdulbasitmurattal",
         "language": "ar",
         "name": "عبد الباسط عبد الصمد المرتل",
@@ -1549,86 +1639,6 @@ export class Constants {
         "type": "versebyverse",
         "direction": null,
         "languageName": "Arabic"
-    },
-    {
-        "identifier": "ar.saoodshuraym",
-        "language": "ar",
-        "name": "سعود الشريم",
-        "englishName": "Saood bin Ibraaheem Ash-Shuraym",
-        "format": "audio",
-        "type": "versebyverse",
-        "direction": null,
-        "languageName": "Arabic"
-    },
-    {
-        "identifier": "en.walk",
-        "language": "en",
-        "name": "Ibrahim Walk",
-        "englishName": "Ibrahim Walk",
-        "format": "audio",
-        "type": "versebyverse",
-        "direction": null,
-        "languageName": "English"
-    },
-    {
-        "identifier": "fa.hedayatfarfooladvand",
-        "language": "fa",
-        "name": "Fooladvand - Hedayatfar",
-        "englishName": "Fooladvand - Hedayatfar",
-        "format": "audio",
-        "type": "translation",
-        "direction": null,
-        "languageName": "Persian"
-    },
-    {
-        "identifier": "ar.parhizgar",
-        "language": "ar",
-        "name": "شهریار پرهیزگار",
-        "englishName": "Parhizgar",
-        "format": "audio",
-        "type": "versebyverse",
-        "direction": null,
-        "languageName": "Arabic"
-    },
-    {
-        "identifier": "ur.khan",
-        "language": "ur",
-        "name": "Shamshad Ali Khan",
-        "englishName": "Shamshad Ali Khan",
-        "format": "audio",
-        "type": "versebyverse",
-        "direction": null,
-        "languageName": "Urdu"
-    },
-    {
-        "identifier": "fr.leclerc",
-        "language": "fr",
-        "name": "Youssouf Leclerc",
-        "englishName": "Youssouf Leclerc",
-        "format": "audio",
-        "type": "versebyverse",
-        "direction": null,
-        "languageName": "French"
-    },
-    {
-        "identifier": "ar.aymanswoaid",
-        "language": "ar",
-        "name": "أيمن سويد",
-        "englishName": "Ayman Sowaid",
-        "format": "audio",
-        "type": "versebyverse",
-        "direction": null,
-        "languageName": "Arabic"
-    },
-    {
-        "identifier": "ru.kuliev-audio",
-        "language": "ru",
-        "name": "Elmir Kuliev by 1MuslimApp",
-        "englishName": "Elmir Kuliev by 1MuslimApp",
-        "format": "audio",
-        "type": "versebyverse",
-        "direction": null,
-        "languageName": "Russian"
     }
 ] ;
 }
