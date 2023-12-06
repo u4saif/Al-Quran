@@ -47,11 +47,11 @@
       *ngFor="let aya of surah.data[0].ayahs; index as i"
     >
       <span [ngClass]="{'active': currentAyatPlaying.number== (i+1)}" class="d-flex align-items-center flex-row-reverse">
-        <h1 class="m-2" style="max-width: 90%">
+        <h1 class="m-2"  >
           <p class="text-end">{{ aya.text }}</p>
         </h1>
-        <div class="footer-field">
-          <strong> {{ aya.numberInSurah }}</strong>
+        <div class="ayatNumberContainer">
+          <strong> {{ aya.numberInSurah | englishToArabic }}</strong>
         </div>
       </span>
       <ng-container *ngIf="translationVisiable">

@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from  '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { AudioPlayerDirective } from './customDirectives/audio-player.directive';
+import { EnglishToArabicPipe } from './customPipe/english-to-arabic.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { AudioPlayerDirective } from './customDirectives/audio-player.directive'
     SurahCardComponent,
     SurahPageComponent,
     SettingCardComponent,
-    AudioPlayerDirective
+    AudioPlayerDirective,
+    EnglishToArabicPipe
   ],
   imports: [
     BrowserModule,
