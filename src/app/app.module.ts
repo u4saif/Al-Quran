@@ -15,6 +15,7 @@ import { HttpClientModule } from  '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { AudioPlayerDirective } from './customDirectives/audio-player.directive';
 import { EnglishToArabicPipe } from './customPipe/english-to-arabic.pipe';
+import { LoadingSkeletonComponent } from './components/loading-skeleton/loading-skeleton.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { EnglishToArabicPipe } from './customPipe/english-to-arabic.pipe';
     SurahPageComponent,
     SettingCardComponent,
     AudioPlayerDirective,
-    EnglishToArabicPipe
+    EnglishToArabicPipe,
+    LoadingSkeletonComponent
   ],
   imports: [
     BrowserModule,
