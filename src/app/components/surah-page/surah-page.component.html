@@ -76,13 +76,12 @@
             'flex-row-reverse': surah.data[1].edition.direction != 'rtl'
           }"
         >
-          Listen:
-          <div
+          <span (click)="playAyat(surah.data[2].ayahs[i], i + 1)">Audio</span> 
+          <span
             (click)="playAyat(surah.data[2].ayahs[i], i + 1)"
             class="playIcon"
           >
-            <strong></strong>
-          </div>
+          </span>
         </span>
       </ng-container>
     </li>
