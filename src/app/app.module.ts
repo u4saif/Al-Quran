@@ -16,6 +16,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { AudioPlayerDirective } from './customDirectives/audio-player.directive';
 import { EnglishToArabicPipe } from './customPipe/english-to-arabic.pipe';
 import { LoadingSkeletonComponent } from './components/loading-skeleton/loading-skeleton.component';
+import { SearchBoxComponent } from './components/search-box/search-box.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { LoadingSkeletonComponent } from './components/loading-skeleton/loading-
     SettingCardComponent,
     AudioPlayerDirective,
     EnglishToArabicPipe,
-    LoadingSkeletonComponent
+    LoadingSkeletonComponent,
+    SearchBoxComponent
   ],
   imports: [
     BrowserModule,

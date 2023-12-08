@@ -1,54 +1,93 @@
 <div [attr.data-bs-theme]="currentTheme">
   <div class="topnavMain">
-    <div class="top" style="z-index: 99999;"  *ngIf="(cardData$ | async) as cardData" >
+    <div
+      class="top"
+      style="z-index: 99999"
+      *ngIf="cardData"
+    >
       <app-top-nav (toggleTheme)="toggleTheme($event)">
         <div ngbDropdown class="btn-group surahDropdown" #myDrop="ngbDropdown">
-          <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>
+          <button
+            class="btn btn-sm dropdown-toggle"
+            type="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            ngbDropdownToggle
+          >
             Change Surah
           </button>
-          <div ngbDropdownMenu class="dropdown-menu" style="left:-10px;width: 90vw;">
-            <div class="overflow-y-scroll" (click)="$event.stopPropagation(); myDrop.close()"
-             style="height: 90vh;">
-              <ng-container *ngFor="let card of cardData.data;index as i">
-                <app-surah-card [card]="card" [currentSurah]="currentSurah"
-                  (surahChangeEvent)="surahChanged($event)"></app-surah-card>
+          <div
+            ngbDropdownMenu
+            class="dropdown-menu"
+            style="left: -10px; width: 90vw"
+          >
+            <div
+              class="overflow-y-scroll"
+              (click)="$event.stopPropagation(); myDrop.close()"
+              style="height: 90vh"
+            >
+              <ng-container *ngFor="let card of cardData; index as i">
+                <app-surah-card
+                  [card]="card"
+                  [currentSurah]="currentSurah"
+                  (surahChangeEvent)="surahChanged($event)"
+                ></app-surah-card>
               </ng-container>
             </div>
           </div>
         </div>
         <div ngbDropdown class="btn-group">
           <a>
-            <img ngbDropdownToggle src="../../assets/SVG/setting.svg" alt="setting" width="20px" height="20px">
+            <img
+              ngbDropdownToggle
+              src="../../assets/SVG/setting.svg"
+              alt="setting"
+              width="20px"
+              height="20px"
+            />
           </a>
-          <div ngbDropdownMenu >
-            <div class="overflow-y-scroll" style="width: 100vw; height: 50vh;">
-              <app-setting-card (settinFormData)="settingUpdate($event)"></app-setting-card>
+          <div ngbDropdownMenu>
+            <div class="overflow-y-scroll" style="width: 100vw; height: 50vh">
+              <app-setting-card
+                (settinFormData)="settingUpdate($event)"
+              ></app-setting-card>
             </div>
           </div>
         </div>
       </app-top-nav>
-      
     </div>
-    <div class="mainContainer" *ngIf="(cardData$ | async) as cardData">
-      <div class="surahCard" style=" height: 90vh; overflow-y: scroll;">
-        <ng-container *ngFor="let card of cardData.data;index as i">
-          <app-surah-card [card]="card" [currentSurah]="currentSurah"
-            (surahChangeEvent)="surahChanged($event)"></app-surah-card>
+    <div class="mainContainer" *ngIf="cardData">
+      <div class="surahCard" style="height: 90vh; overflow-y: scroll">
+        <app-search-box
+          (searchKey)="search($event)"
+        ></app-search-box>
+        <ng-container *ngFor="let card of cardData; index as i">
+          <app-surah-card
+            [card]="card"
+            [currentSurah]="currentSurah"
+            (surahChangeEvent)="surahChanged($event)"
+          ></app-surah-card>
         </ng-container>
       </div>
 
       <div class="surahPage">
-
-        <div class="onlyPage" style="float:left; max-height: 90vh; overflow-y: auto;">
+        <div
+          class="onlyPage"
+          style="float: left; max-height: 90vh; overflow-y: auto"
+        >
           <app-surah-page [surah]="surahData"></app-surah-page>
         </div>
 
-        <div class="settingCard" style="width: 20%; float:right;">
-          <app-setting-card (settinFormData)="settingUpdate($event)"></app-setting-card>
+        <div class="settingCard" style="width: 20%; float: right">
+          <app-setting-card
+            (settinFormData)="settingUpdate($event)"
+          ></app-setting-card>
         </div>
       </div>
-      <div class="sidebar-nav" style="z-index: 999990;">
+      <div class="sidebar-nav" style="z-index: 999990">
         <app-side-nav></app-side-nav>
       </div>
-
     </div>
+  </div>
+</div>

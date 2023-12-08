@@ -13,9 +13,11 @@ export class DashboardComponent implements OnInit {
   translationText:string ='';
   translationAudio:string ='';
   currentSurah = 1;
-  cardData$: Observable<any>;
+  //cardData$: Observable<any>;
+  cardData : any;
+  cardDataInitial : any;
   constructor(private dashboardServive:DashboardService) {
-    this.cardData$ =  this.dashboardServive.get('https://api.alquran.cloud/v1/surah');
+    //this.cardData$ =  this.dashboardServive.get('https://api.alquran.cloud/v1/surah');
   }
   //https://api.alquran.cloud/v1/edition/language
   //https://api.alquran.cloud/v1/edition/format/text /audio
@@ -24,7 +26,15 @@ export class DashboardComponent implements OnInit {
 
   surahData: any = null;
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.dashboardServive.get('https://api.alquran.cloud/v1/surah').subscribe(
+      (response:any)=>{
+        this.cardData=response.data
+        this.cardDataInitial=response.data
+      },
+      (error)=>{console.error(error);
+      })
+  }
   toggleTheme(value: string) {
     this.currentTheme = value;
   }
@@ -49,5 +59,19 @@ export class DashboardComponent implements OnInit {
     .subscribe((response) => {
       this.surahData = response;
     }); 
+  }
+  searchKeys :any = ['englishName','englishNameTranslation','name','number','numberOfAyahs','revelationType'];
+  search(value:any){
+     let copy_cardData = this.cardDataInitial;
+     this.cardData = copy_cardData.filter((item: any) => {
+      return (
+        item[this.searchKeys[0]]?.toString().toLowerCase().includes(value) ||
+        item[this.searchKeys[1]]?.toString().toLowerCase().includes(value) ||
+        item[this.searchKeys[2]]?.toString().toLowerCase().includes(value) ||
+        item[this.searchKeys[3]]?.toString().toLowerCase().includes(value) ||
+        item[this.searchKeys[4]]?.toString().toLowerCase().includes(value) ||
+        item[this.searchKeys[5]]?.toString().toLowerCase().includes(value)
+      );
+    });
   }
 }
