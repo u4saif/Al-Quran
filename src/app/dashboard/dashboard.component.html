@@ -1,10 +1,6 @@
 <div [attr.data-bs-theme]="currentTheme">
   <div class="topnavMain">
-    <div
-      class="top"
-      style="z-index: 99999"
-      *ngIf="cardData"
-    >
+    <div class="top" style="z-index: 99999" *ngIf="cardData">
       <app-top-nav (toggleTheme)="toggleTheme($event)">
         <div ngbDropdown class="btn-group surahDropdown" #myDrop="ngbDropdown">
           <button
@@ -24,14 +20,16 @@
           >
             <div
               class="overflow-y-scroll"
-              (click)="$event.stopPropagation(); myDrop.close()"
+              
               style="height: 90vh"
             >
+              <app-search-box (searchKey)="search($event)"></app-search-box>
               <ng-container *ngFor="let card of cardData; index as i">
                 <app-surah-card
                   [card]="card"
                   [currentSurah]="currentSurah"
                   (surahChangeEvent)="surahChanged($event)"
+                  (click)="$event.stopPropagation(); myDrop.close()"
                 ></app-surah-card>
               </ng-container>
             </div>
@@ -59,9 +57,7 @@
     </div>
     <div class="mainContainer" *ngIf="cardData">
       <div class="surahCard" style="height: 90vh; overflow-y: scroll">
-        <app-search-box
-          (searchKey)="search($event)"
-        ></app-search-box>
+        <app-search-box (searchKey)="search($event)"></app-search-box>
         <ng-container *ngFor="let card of cardData; index as i">
           <app-surah-card
             [card]="card"
