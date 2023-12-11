@@ -1,74 +1,38 @@
-label {
-  margin-left: 8px;
-  width: 50px;
+#toggleTheme{
+    display: none;
+  } 
+
+label{
+  width: 45px;
   height: 20px;
-  position: relative;
-  display: block;
-  background: #fffcfc;
+  margin-left: 4px;
   border-radius: 20px;
-  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
-    inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  background-color: #fffcfc;
+  position: relative;
   cursor: pointer;
+  transition: 0.4s;
+  outline: 1px solid #232323;
 }
 
-label:after {
-  content: "";
-  width: 16px;
-  height: 16px;
+label::after{
+  content: '';
+  width: 18px;
+  height: 17px;
   position: absolute;
-  top: 2px;
-  left: 2px;
-  background: linear-gradient(180deg, #ffcc89, #d8860b);
+  right: 0px;
   border-radius: 50%;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-}
-input {
-  width: 0;
-  height: 0;
-  visibility: hidden;
+  box-shadow: inset 16px -15px 0px 0px rgb(255, 204, 18);
+  margin: 1px;
+  transition: 0.4s;
 }
 
-input:checked + label {
-  background: #242424;
-}
-input:checked + label:after {
-  left: 47px;
-  transform: translateX(-100%);
-  background: linear-gradient(180deg, #777, #3a3a3a);
-}
-label,
-label:after {
-  transition: 0.2s;
+input:checked + label::after{
+  transform: translateX(-24px); 
+  box-shadow: inset 5px -2px 0px 0px #fffcfc;
+
 }
 
-label:active:after {
-  width: 40px;
-}
+input:checked + label{ 
+  background-color: #232323;
 
-input:checked + label + .background {
-  background: #242424;
-}
-
-label img {
-  position: absolute;
-  width: 170px;
-  top: 2px;
-  z-index: 100;
-}
-label img.sun {
-  left: -75px;
-  fill: #fff;
-  transition: 0.3s;
-}
-label img.moon {
-  left: -46px;
-  top: 3px;
-  fill: #fff;
-  transition: 0.3s;
-}
-input:checked + label svg.sun {
-  fill: #ffffff;
-}
-input:checked + label svg.moon {
-  fill: #fff;
 }
