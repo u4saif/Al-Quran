@@ -91,9 +91,14 @@
 
 }
 
-.dropdown-menu {
-    position: fixed !important;
-    transform: translate3d(0px, 50px, 0px) !important;
-    padding: 0px;
-    
+::ng-deep{
+    .p-sidebar .p-sidebar-header {
+        padding: 0.25rem ;
+    }
+    .p-sidebar .p-sidebar-content {
+        padding: 0.25rem;
+    }   
+    .p-sidebar .p-sidebar-footer {
+        padding: 0rem;
+    }
 }

@@ -17,6 +17,7 @@ import { AudioPlayerDirective } from './customDirectives/audio-player.directive'
 import { EnglishToArabicPipe } from './customPipe/english-to-arabic.pipe';
 import { LoadingSkeletonComponent } from './components/loading-skeleton/loading-skeleton.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
+import { SharedPrimeNgModulesModule } from './shared-prime-ng-modules/shared-prime-ng-modules.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +39,7 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
     HttpClientModule,
     AppRoutingModule,
     NgbModule,
+    SharedPrimeNgModulesModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable
