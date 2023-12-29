@@ -16,6 +16,7 @@ export class DashboardComponent implements OnInit {
   cardData : any;
   cardDataInitial : any;
   sidebarVisible: boolean = false;
+  settingVisible: boolean = false;
   constructor(private dashboardServive:DashboardService) {
     //this.cardData$ =  this.dashboardServive.get('https://api.alquran.cloud/v1/surah');
   }
@@ -49,6 +50,7 @@ export class DashboardComponent implements OnInit {
       .subscribe((response) => {
         this.surahData = response;
       });
+      this.settingVisible=false;
   }
 
   surahChanged(eventData: number){
