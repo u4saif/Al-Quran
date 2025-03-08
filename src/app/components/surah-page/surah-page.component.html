@@ -41,18 +41,21 @@
       Ayat: {{ currentAyatPlaying.number }} Surah:{{ surah.data[0].number }}
     </div>
   </div>
-  <ul class="list-group list-group-flush p-0">
+  <ul class="list-group list-group-flush p-0" #surahContainer>
     <li
       class="list-group-item"
       *ngFor="let aya of surah.data[0].ayahs; index as i"
+      #listItem
     >
       <span [ngClass]="{'active': currentAyatPlaying.number== (i+1)}" class="d-flex align-items-center flex-row-reverse">
         <h1 class="m-2"  >
-          <p class="text-end">{{ aya.text }}</p>
+          <p class="text-end">{{ aya.text }} 
+            <span class="ayatNumberContainer">
+              <strong> {{ aya.numberInSurah | englishToArabic }}</strong>
+            </span>
+          </p>
         </h1>
-        <div class="ayatNumberContainer">
-          <strong> {{ aya.numberInSurah | englishToArabic }}</strong>
-        </div>
+       
       </span>
       <ng-container *ngIf="translationVisiable">
         <span

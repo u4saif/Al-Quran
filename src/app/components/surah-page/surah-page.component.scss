@@ -69,17 +69,17 @@ li:hover{
 
 .playerInfo{
     width: 100%;
-    background-color: #20c997;
+    background-color: #daff1f;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-style: italic;
-    font-size: smaller;
-    // font-weight: bold;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .player{
-    background-color: #20c9977a;
+    background-color: #20c996;
     z-index: 16;
     position: sticky;
     top: 0vh;
@@ -87,22 +87,24 @@ li:hover{
     flex-direction: row;
 }
   audio::-webkit-media-controls-panel {
-    background-color: #20c9977a;
-    opacity: 0.85;
+    background-color: #20c997;
+    opacity: 0.99;
     color: #fff;
 }
 
 .ayatNumberContainer {
-    padding-left: 2px;
-    padding-right: 2px;
+    padding-left: 0.2px;
+    padding-right: 0.2px;
     background: #20c997;
-    border-radius: 1em;
+    border-radius: 4px;
     text-align: center;
-    width: 30px;
-    border: 2px dashed #111211;
+    width: 18px;
+    height: 18px;
+    border: 1px dashed #111211;
+    font-size: 14px;
 }
 .active{
-    background: #20c9971a;
+   // background: #20c9971a;
     //outline: 2px solid #20c997;
     box-shadow: 0px 0px 0px 0px #20c997, 1px 0px 0px 0px #20c997;
 }
