@@ -47,7 +47,7 @@
       </app-top-nav>
     </div>
     <div class="mainContainer" *ngIf="cardData">
-      <div class="surahCard" style="height: 90vh; overflow-y: scroll">
+      <div class="surahCard" style="height: 99vh; overflow-y: scroll">
         <app-search-box (searchKey)="search($event)"></app-search-box>
         <ng-container *ngFor="let card of cardData; index as i">
           <app-surah-card
