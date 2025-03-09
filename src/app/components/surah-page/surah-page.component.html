@@ -47,12 +47,15 @@
       *ngFor="let aya of surah.data[0].ayahs; index as i"
       #listItem
     >
-      <span [ngClass]="{'active': currentAyatPlaying.number== (i+1)}" class="d-flex align-items-center flex-row-reverse">
+      <span (click)="playAyat(surah.data[2].ayahs[i], i + 1)" [ngClass]="{'active': currentAyatPlaying.number== (i+1)}" class="d-flex align-items-center flex-row-reverse">
         <h1 class="m-2"  >
-          <p class="text-end">{{ aya.text }} 
+          <p class="text-end">{{ aya.text }}  
             <span class="ayatNumberContainer">
               <strong> {{ aya.numberInSurah | englishToArabic }}</strong>
-            </span>
+            </span> 
+          <span class="spearkerIcon" *ngIf="currentAyatPlaying.number== (i+1)">
+            <i class="pi pi-volume-up" style="font-size: 1rem"></i>
+          </span>
           </p>
         </h1>
        
@@ -79,12 +82,8 @@
             'flex-row-reverse': surah.data[1].edition.direction != 'rtl'
           }"
         >
-          <span (click)="playAyat(surah.data[2].ayahs[i], i + 1)">Audio</span> 
-          <span
-            (click)="playAyat(surah.data[2].ayahs[i], i + 1)"
-            class="playIcon"
-          >
-          </span>
+          <!-- <span (click)="playAyat(surah.data[2].ayahs[i], i + 1)">Audio</span>  -->
+        
         </span>
       </ng-container>
     </li>

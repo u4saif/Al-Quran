@@ -104,7 +104,17 @@ li:hover{
     font-size: 14px;
 }
 .active{
-   // background: #20c9971a;
+    background: #dcf8c6;
     //outline: 2px solid #20c997;
-    box-shadow: 0px 0px 0px 0px #20c997, 1px 0px 0px 0px #20c997;
+   // box-shadow: 0px 0px 0px 0px #20c997, 1px 0px 0px 0px #20c997;
+}
+
+.spearkerIcon{
+    position: absolute;
+    left: 4px;
+    font-size: 14px;
+}
+
+.list-group-item{
+    padding: 2px;
 }

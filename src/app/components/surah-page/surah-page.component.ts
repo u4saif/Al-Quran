@@ -39,8 +39,8 @@ export class SurahPageComponent implements OnInit, OnChanges {
     this.audioURL = item.audio;
     const ayatPlaying = this.listItems.toArray()[ayatNumber-1];
     if (ayatPlaying) {
-      ayatPlaying.nativeElement.style.backgroundColor = '#fff00054';
       ayatPlaying.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      ayatPlaying.nativeElement.style.backgroundColor = '#fff00054';
     } else {
       console.log(`The ${ayatNumber}th <li> does not exist.`);
     }
