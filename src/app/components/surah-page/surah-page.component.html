@@ -49,7 +49,7 @@
     >
       <span (click)="playAyat(surah.data[2].ayahs[i], i + 1)" [ngClass]="{'active': currentAyatPlaying.number== (i+1)}" class="d-flex align-items-center flex-row-reverse">
         <h1 class="m-2"  >
-          <p class="text-end">{{ aya.text }}  
+          <p class="text-end pAyatext">{{ aya.text }}  
             <span class="ayatNumberContainer">
               <strong> {{ aya.numberInSurah | englishToArabic }}</strong>
             </span> 
@@ -69,10 +69,13 @@
             'active': currentAyatPlaying.number == i+1
           }"
         >
-          <div class="footer-fieldSM">
-            <strong> {{ aya.numberInSurah }}</strong>
+          <div class="">
+            <p class="footer-fieldSM">
+
+              <strong class="fsmall"> {{ aya.numberInSurah }}</strong>
+            </p>
           </div>
-          {{ surah.data[1].ayahs[i].text }}
+         <p>  {{ surah.data[1].ayahs[i].text }} </p>
         </span>
 
         <span
