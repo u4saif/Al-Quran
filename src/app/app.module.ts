@@ -19,6 +19,7 @@ import { LoadingSkeletonComponent } from './components/loading-skeleton/loading-
 import { SearchBoxComponent } from './components/search-box/search-box.component';
 import { SharedPrimeNgModulesModule } from './shared-prime-ng-modules/shared-prime-ng-modules.module';
 import { HomeComponent } from './home/home.component';
+import { ParahComponent } from './parah/parah.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { HomeComponent } from './home/home.component';
     EnglishToArabicPipe,
     LoadingSkeletonComponent,
     SearchBoxComponent,
-    HomeComponent
+    HomeComponent,
+    ParahComponent
   ],
   imports: [
     BrowserModule,

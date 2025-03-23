@@ -1,0 +1,84 @@
+<div [attr.data-bs-theme]="currentTheme">
+  <div class="topnavMain">
+    <div class="top" style="z-index: 99999" *ngIf="cardData">
+      <app-top-nav (toggleTheme)="toggleTheme($event)">
+        <button
+          class="btn btn-sm dropdown-toggle surahDropdown"
+          (click)="sidebarVisible = true"
+          type="button"
+          data-toggle="dropdown"
+        >
+          Change Surah
+        </button>
+        <p-sidebar
+          [(visible)]="sidebarVisible"
+          id="sidebar"
+          (onHide)="sidebarVisible = false"
+          role="region"
+          class="surahDropdown"
+        >
+          <app-search-box (searchKey)="search($event)"></app-search-box>
+          <ng-container *ngFor="let card of cardData; index as i">
+            <a class="text-decoration-none card m-1 rounded-0" style="cursor: pointer;"  >
+              <div class="card-header rounded-0" [ngClass]="{'active' : currentSurah == card.number}">
+                <span style="display: inline-block;">
+                  <div class="footer-field"><strong> {{card.number}}</strong></div>
+                </span><b> {{card.name}}</b>
+              </div>
+            </a>
+          </ng-container>
+        </p-sidebar>
+        <a
+          class="btn btn-sm surahDropdown"
+          (click)="settingVisible = true"
+          type="text"
+        >
+          <img src="../../assets/SVG/setting.svg" width="25" />
+        </a>
+        <p-sidebar
+          [(visible)]="settingVisible"
+          id="sidebar"
+          (onHide)="settingVisible = false"
+          role="region"
+          class="surahDropdown"
+          position="right"
+        >
+          <app-setting-card (settinFormData)="settingUpdate($event)">
+          </app-setting-card>
+        </p-sidebar>
+      </app-top-nav>
+    </div>
+    <div class="mainContainer" *ngIf="cardData">
+      <div class="surahCard" style="height: 99vh; overflow-y: scroll">
+        <app-search-box (searchKey)="search($event)"></app-search-box>
+        <ng-container *ngFor="let card of cardData; index as i">
+          <a class="text-decoration-none card m-1 rounded-0" style="cursor: pointer;" (click)="changeParah(card.number)" >
+            <div class="card-header rounded-0" [ngClass]="{'active' : currentSurah == card.number}">
+              <span style="display: inline-block;">
+                <div class="footer-field"><strong> {{card.number}}</strong></div>
+              </span><b> {{card.name}}</b>
+            </div>
+          </a>
+        </ng-container>
+      </div>
+
+      <div class="surahPage">
+        <div
+          class="onlyPage"
+          style="float: left; max-height: 90vh; overflow-y: auto"
+        >
+          <app-surah-page [surah]="surahData"></app-surah-page>
+        </div>
+
+        <div class="settingCard" style="width: 20%; float: right">
+          <app-setting-card
+            (settinFormData)="settingUpdate($event)"
+          ></app-setting-card>
+        </div>
+      </div>
+      <div class="sidebar-nav" style="z-index: 999990">
+        <app-side-nav></app-side-nav>
+      </div>
+    </div>
+  </div>
+</div>

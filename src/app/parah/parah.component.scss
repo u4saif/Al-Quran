@@ -1,0 +1,104 @@
+.surahCard {
+    width: 30%;
+    float: left;
+    padding-left: 4.5rem;
+}
+
+.surahPage {
+    width: 70%;
+    float: right;
+}
+
+.onlyPage {
+    width: 80%;
+}
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 70px;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-right: 1px solid rgba(0, 0, 0, 0.175);
+    overflow: hidden;
+}
+
+.topnavMain {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    // overflow-y: scroll;
+}
+
+.top {
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.mainContainer {
+    height: 100vh;
+    // padding-left: 70px;
+    //border: 2px solid red;
+
+}
+
+.footer-field {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    //color: white;
+    background-size: cover;
+    background-image: url(../../assets/SVG/16.svg);
+}
+
+.surahDropdown{
+    display: none;
+}
+@media screen and (max-width:750px) {
+    h1 {
+        font: 700 28px/28px Roboto, 'MuseoModerno', sans-serif !important
+    }
+
+    .sidebar-nav,
+    .surahCard,
+    .settingCard {
+        // border: 2px solid red;
+        padding-left: 4.5rem;
+        width: 0%;
+        display: none;
+    }
+
+    .surahPage,
+    .onlyPage {
+        width: 100%;
+    }
+
+    .surahDropdown{
+        //width: 0%;
+        // margin-right: 1em;
+        display: block;
+        h5 > span{
+
+            font-size: small;
+        }
+    }
+
+}
+
+::ng-deep{
+    .p-sidebar .p-sidebar-header {
+        padding: 0.25rem ;
+    }
+    .p-sidebar .p-sidebar-content {
+        padding: 0.25rem;
+    }   
+    .p-sidebar .p-sidebar-footer {
+        padding: 0rem;
+    }
+}
