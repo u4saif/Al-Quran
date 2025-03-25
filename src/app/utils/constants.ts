@@ -238,16 +238,6 @@ export class Constants {
 
   public static readonly TRANSLATION_TEXT = [
     {
-        "identifier": "am.sadiq",
-        "language": "am",
-        "name": "ሳዲቅ & ሳኒ ሐቢብ",
-        "englishName": "ሳዲቅ & ሳኒ ሐቢብ",
-        "format": "text",
-        "type": "translation",
-        "direction": "ltr",
-        "languageName": "Amharic"
-    },
-    {
         "identifier": "ar.muyassar",
         "language": "ar",
         "name": "تفسير المیسر",
@@ -256,6 +246,26 @@ export class Constants {
         "type": "tafsir",
         "direction": "rtl",
         "languageName": "Arabic"
+    },
+    {
+        "identifier": "bn.bengali",
+        "language": "bn",
+        "name": "মুহিউদ্দীন খান",
+        "englishName": "Muhiuddin Khan",
+        "format": "text",
+        "type": "translation",
+        "direction": "ltr",
+        "languageName": "Bengali"
+    },
+    {
+        "identifier": "bn.hoque",
+        "language": "bn",
+        "name": "জহুরুল হক",
+        "englishName": "জহুরুল হক",
+        "format": "text",
+        "type": "translation",
+        "direction": "ltr",
+        "languageName": "Bengali"
     },
     {
         "identifier": "ar.jalalayn",
@@ -268,50 +278,10 @@ export class Constants {
         "languageName": "Arabic"
     },
     {
-        "identifier": "quran-buck",
-        "language": "ar",
-        "name": "Buck",
-        "englishName": "Buck",
-        "format": "text",
-        "type": "translation",
-        "direction": "rtl",
-        "languageName": "Arabic"
-    },
-    {
-        "identifier": "ar.qurtubi",
-        "language": "ar",
-        "name": "تفسير القرطبي",
-        "englishName": "Tafseer Al Qurtubi",
-        "format": "text",
-        "type": "tafsir",
-        "direction": "rtl",
-        "languageName": "Arabic"
-    },
-    {
-        "identifier": "ar.miqbas",
-        "language": "ar",
-        "name": "تنوير المقباس من تفسير بن عباس",
-        "englishName": "Tafseer Tanwir al-Miqbas",
-        "format": "text",
-        "type": "tafsir",
-        "direction": "rtl",
-        "languageName": "Arabic"
-    },
-    {
         "identifier": "ar.waseet",
         "language": "ar",
         "name": "الـتـفـسـيـر الـوسـيـط",
         "englishName": "Tafseer Al-Waseet",
-        "format": "text",
-        "type": "tafsir",
-        "direction": "rtl",
-        "languageName": "Arabic"
-    },
-    {
-        "identifier": "ar.baghawi",
-        "language": "ar",
-        "name": "تفسير البغوي",
-        "englishName": "Tafseer Al-Baghawi",
         "format": "text",
         "type": "tafsir",
         "direction": "rtl",
@@ -336,26 +306,6 @@ export class Constants {
         "type": "translation",
         "direction": "ltr",
         "languageName": "Azerbaijani"
-    },
-    {
-        "identifier": "bn.bengali",
-        "language": "bn",
-        "name": "মুহিউদ্দীন খান",
-        "englishName": "Muhiuddin Khan",
-        "format": "text",
-        "type": "translation",
-        "direction": "ltr",
-        "languageName": "Bengali"
-    },
-    {
-        "identifier": "bn.hoque",
-        "language": "bn",
-        "name": "জহুরুল হক",
-        "englishName": "জহুরুল হক",
-        "format": "text",
-        "type": "translation",
-        "direction": "ltr",
-        "languageName": "Bengali"
     },
     {
         "identifier": "cs.hrbek",
@@ -668,116 +618,6 @@ export class Constants {
         "languageName": "Persian"
     },
     {
-        "identifier": "fa.ghomshei",
-        "language": "fa",
-        "name": "الهی قمشه‌ای",
-        "englishName": "Mahdi Elahi Ghomshei",
-        "format": "text",
-        "type": "translation",
-        "direction": "rtl",
-        "languageName": "Persian"
-    },
-    {
-        "identifier": "fa.makarem",
-        "language": "fa",
-        "name": "مکارم شیرازی",
-        "englishName": "Naser Makarem Shirazi",
-        "format": "text",
-        "type": "translation",
-        "direction": "rtl",
-        "languageName": "Persian"
-    },
-    {
-        "identifier": "fa.ansarian",
-        "language": "fa",
-        "name": "انصاریان",
-        "englishName": "Hussain Ansarian",
-        "format": "text",
-        "type": "translation",
-        "direction": "rtl",
-        "languageName": "Persian"
-    },
-    {
-        "identifier": "fa.bahrampour",
-        "language": "fa",
-        "name": "بهرام پور",
-        "englishName": "Abolfazl Bahrampour",
-        "format": "text",
-        "type": "translation",
-        "direction": "rtl",
-        "languageName": "Persian"
-    },
-    {
-        "identifier": "fa.khorramshahi",
-        "language": "fa",
-        "name": "خرمشاهی",
-        "englishName": "Baha'oddin Khorramshahi",
-        "format": "text",
-        "type": "translation",
-        "direction": "rtl",
-        "languageName": "Persian"
-    },
-    {
-        "identifier": "fa.mojtabavi",
-        "language": "fa",
-        "name": "مجتبوی",
-        "englishName": "Sayyed Jalaloddin Mojtabavi",
-        "format": "text",
-        "type": "translation",
-        "direction": "rtl",
-        "languageName": "Persian"
-    },
-    {
-        "identifier": "fa.khorramdel",
-        "language": "fa",
-        "name": "خرمدل",
-        "englishName": "Mostafa Khorramdel",
-        "format": "text",
-        "type": "translation",
-        "direction": "rtl",
-        "languageName": "Persian"
-    },
-    {
-        "identifier": "fa.moezzi",
-        "language": "fa",
-        "name": "معزی",
-        "englishName": "Mohammad Kazem Moezzi",
-        "format": "text",
-        "type": "translation",
-        "direction": "rtl",
-        "languageName": "Persian"
-    },
-    {
-        "identifier": "fa.gharaati",
-        "language": "fa",
-        "name": "قرائتی",
-        "englishName": "قرائتی",
-        "format": "text",
-        "type": "translation",
-        "direction": "rtl",
-        "languageName": "Persian"
-    },
-    {
-        "identifier": "fa.sadeqi",
-        "language": "fa",
-        "name": "صادقی تهرانی",
-        "englishName": "صادقی تهرانی",
-        "format": "text",
-        "type": "translation",
-        "direction": "rtl",
-        "languageName": "Persian"
-    },
-    {
-        "identifier": "fa.safavi",
-        "language": "fa",
-        "name": "صفوی",
-        "englishName": "صفوی",
-        "format": "text",
-        "type": "translation",
-        "direction": "rtl",
-        "languageName": "Persian"
-    },
-    {
         "identifier": "fr.hamidullah",
         "language": "fr",
         "name": "Hamidullah",
@@ -1012,56 +852,6 @@ export class Constants {
         "language": "ru",
         "name": "Порохова",
         "englishName": "V. Porokhova",
-        "format": "text",
-        "type": "translation",
-        "direction": "ltr",
-        "languageName": "Russian"
-    },
-    {
-        "identifier": "ru.abuadel",
-        "language": "ru",
-        "name": "Абу Адель",
-        "englishName": "Abu Adel",
-        "format": "text",
-        "type": "translation",
-        "direction": "ltr",
-        "languageName": "Russian"
-    },
-    {
-        "identifier": "ru.krachkovsky",
-        "language": "ru",
-        "name": "Крачковский",
-        "englishName": "Ignaty Yulianovich Krachkovsky",
-        "format": "text",
-        "type": "translation",
-        "direction": "ltr",
-        "languageName": "Russian"
-    },
-    {
-        "identifier": "ru.muntahab",
-        "language": "ru",
-        "name": "Аль-Мунтахаб",
-        "englishName": "Ministry of Awqaf, Egypt",
-        "format": "text",
-        "type": "translation",
-        "direction": "ltr",
-        "languageName": "Russian"
-    },
-    {
-        "identifier": "ru.sablukov",
-        "language": "ru",
-        "name": "Саблуков",
-        "englishName": "Gordy Semyonovich Sablukov",
-        "format": "text",
-        "type": "translation",
-        "direction": "ltr",
-        "languageName": "Russian"
-    },
-    {
-        "identifier": "ru.kuliev-alsaadi",
-        "language": "ru",
-        "name": "Кулиев + ас-Саади",
-        "englishName": "Кулиев + ас-Саади",
         "format": "text",
         "type": "translation",
         "direction": "ltr",

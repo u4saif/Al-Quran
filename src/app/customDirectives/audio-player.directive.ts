@@ -22,7 +22,7 @@ export class AudioPlayerDirective {
       (item: any) => item.audio == this.el.nativeElement.src
     );
 
-    console.log('🚀 ~ file: audio', current);
+    // console.log('🚀 ~ file: audio', current);
     if (this.audioPlayList.ayahs[current.numberInSurah])
       this.nextAyatPlayed.emit(this.audioPlayList.ayahs[current.numberInSurah]);
   }

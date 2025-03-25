@@ -36,7 +36,7 @@
         id="translationText"
         class="form-select rounded-0"
         name="translationText"
-        [(ngModel)]="TranslationText"
+        [(ngModel)]="translationText"
       >
         <ng-container *ngFor="let text of TranslationTextOption">
           <option value="{{ text.identifier }}">{{text.languageName}} : ({{ text.name }})</option>
